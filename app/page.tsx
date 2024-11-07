@@ -1,100 +1,91 @@
-import Image from "next/image";
+// pages/index.js
+import React from "react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="font-sans">
+      {/* Hero Section */}
+      <section className="bg-blue-900 text-white h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          Accessible Education for Every South African Student
+        </h1>
+        <p className="text-xl md:text-2xl mb-8">
+          Learn anytime, anywhere, with curriculum-aligned resources.
+        </p>
+        <a
+          href="#features"
+          className="bg-yellow-500 text-white px-6 py-3 rounded-full font-medium hover:bg-yellow-600"
+        >
+          Get Started
+        </a>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Features Section */}
+      <section
+        id="features"
+        className="py-16 px-4 md:px-12 bg-gray-50 text-center"
+      >
+        <h2 className="text-3xl font-bold mb-8">Key Features</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-6 bg-white shadow-lg rounded-lg">
+            <h3 className="text-xl font-semibold mb-4">Live Tutoring</h3>
+            <p>One-on-one sessions with expert tutors in real-time.</p>
+          </div>
+          <div className="p-6 bg-white shadow-lg rounded-lg">
+            <h3 className="text-xl font-semibold mb-4">Interactive Quizzes</h3>
+            <p>Practice tests and quizzes tailored to your level.</p>
+          </div>
+          <div className="p-6 bg-white shadow-lg rounded-lg">
+            <h3 className="text-xl font-semibold mb-4">Resource Library</h3>
+            <p>Access study materials, past papers, and notes.</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 px-4 md:px-12 bg-white text-center">
+        <h2 className="text-3xl font-bold mb-8">Why Choose Us?</h2>
+        <p className="text-lg mb-6">
+          Our platform is designed for South African students, with
+          curriculum-aligned content and a focus on accessibility.
+        </p>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-4 md:px-12 bg-gray-50 text-center">
+        <h2 className="text-3xl font-bold mb-8">What Our Users Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="p-6 bg-white shadow-lg rounded-lg">
+            <p>
+              "This platform helped me excel in my exams! The resources are just
+              what I needed."
+            </p>
+            <p className="mt-4 font-semibold">– Student</p>
+          </div>
+          <div className="p-6 bg-white shadow-lg rounded-lg">
+            <p>
+              "Our school saw tremendous improvements in grades after using this
+              platform."
+            </p>
+            <p className="mt-4 font-semibold">– Teacher</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 md:px-12 bg-blue-900 text-center text-white">
+        <h2 className="text-3xl font-bold mb-4">Ready to Start Learning?</h2>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#signup"
+          className="bg-yellow-500 text-white px-6 py-3 rounded-full font-medium hover:bg-yellow-600"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          Join for Free
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2024 Your Platform Name. All Rights Reserved.</p>
       </footer>
     </div>
   );
