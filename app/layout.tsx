@@ -16,7 +16,7 @@ export default function RootLayout({
       <head>
         {/* Import Poppins font from Google Fonts */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@100;300;400;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
